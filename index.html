@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Pain Coach</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.3.2.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="css/pain_coach.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.3.2.min.js" language="JavaScript"></script>
+    <script src="js/application.js" language="JavaScript"></script>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <style scoped>
+        .nav-bar .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+        .nav-bar .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+
+        #tbutton1 .ui-icon { background:  url(_assets/img/TabBarHomeIcon.png) 100% 100% no-repeat; background-size: 22px 22px; }
+        #tbutton2 .ui-icon { background:  url(_assets/img/TabBarLearnIcon.png) 100% 100% no-repeat; background-size: 24px 24px;  }
+        #tbutton3 .ui-icon { background:  url(_assets/img/TabBarAssessIcon.png) 100% 100% no-repeat;  background-size: 30px 24px; }
+        #tbutton4 .ui-icon { background:  url(_assets/img/TabBarManageIcon.png) 100% 100% no-repeat;  background-size: 24px 24px; }
+        #tbutton5 .ui-icon { background:  url(_assets/img/TabBarGoalsIcon.png) 100% 100% no-repeat;  background-size: 24px 24px; }
+
+    </style>
+
+</head>
+
+<body  data-theme="b" style="background-image:url(_assets/img/backgroundStripes.png); " >
+
+
+
+<!-- #home Section -->
+<div  data-role="page" data-theme="b" id="home" class="my-page" >
+    <script>loadPage("home", "templates/home/home-page.html")
+    </script>
+</div>
+
+<!-- #learn Section -->
+<div  data-role="page" data-theme="b" id="learn" class="my-page"  data-dom-cache="true" >
+    <script>
+        loadPage("learn", "templates/learn/learn.html")
+    </script>
+</div>
+
+<!-- #assess Section-->
+<div  data-role="page" data-theme="b" id="assess" class="my-page" data-dom-cache="true">
+    <script>
+        loadPage("assess", "templates/assess/assess.html")
+    </script>
+
+</div>
+
+<!-- #manage Section-->
+<div  data-role="page" data-theme="b" id="manage" class="my-page" data-dom-cache="true">
+    <script>
+        loadPage("manage", "templates/manage/manage.html")
+    </script>
+</div>
+
+<!-- #goals section-->
+<div  data-role="page" data-theme="b" id="goals" class="my-page" data-dom-cache="true">
+
+    <script>
+        loadPage("goals", "templates/goals/goals.html")
+    </script>
+</div>
+
+
+<!--Begin learn basics-->
+<div  data-role="page" data-theme="b" id="learnbasics" class="my-page" data-dom-cache="true">
+
+    <script>
+        loadPage("learnbasics", "templates/learn/learnbasics.html")
+    </script>
+</div>
+
+<div data-role="page" id="acute" data-theme="b" >
+    <script>
+        loadPage("acute", "templates/learn/acute.html")
+    </script>
+  </div><!--end popup-->
+
+<div data-role="page" id="cycle" data-theme="b" >
+    <script>
+        loadPage("cycle", "templates/learn/cycle.html")
+    </script>
+</div><!--end popup-->
+
+
+<div data-role="page" id="psycho" data-theme="b" >
+    <script>
+        clientSideInclude("psycho", "templates/learn/psycho.html")
+    </script>
+</div><!--end popup-->
+
+</body>
+</html>
