@@ -1,4 +1,31 @@
 /* A bit custom styling */
+
+.static-page {
+
+    background-image:url('../_assets/img/backgroundStripes.png');
+
+}
+/* Link to the Google webfont is in the head */
+
+.my-page .ui-title, .my-page .ui-li-aside {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.my-page .ui-footer {
+    color: #666;
+}
+.my-page .ui-li-desc {
+    color: #c0c0c0;
+}
+.my-page .ui-li-aside {
+    color: #fffff5;
+}
+.my-page .ui-listview .ui-li.ui-btn {
+    background-image: none;
+    border-color: #222;
+}
+
 .my-page {
 
    background-image:url('../_assets/img/backgroundStripes.png');
