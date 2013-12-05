@@ -2,6 +2,8 @@
  * Created by davidbagno on 11/22/13.
  */
     var daniel = "test";
+    var dave="test";
+
 const oAuthURI = "https://hadev.agilexhealth.com:8443/ssoeproxy/veteran/authorize?response_type=code&state=stateId&client_id=MobileBlueButton&redirect_uri=https://hadev.agilexhealth.com:8443/MobileHealthPlatformWeb/oauthtoken?original_redirect_uri%3Dhttp://localhost:63342/jqm-root/index.html#goals&scope=read";
 
 var userLoggedIn = false;
