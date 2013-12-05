@@ -2,7 +2,13 @@
  * Created by davidbagno on 11/22/13.
  */
 function doLearn(x){
+switch(x)
+{
+    case "1":
+        window.alert('1');
+        break;
 
+}
 }
 
 function hideByClassName(classname) {
