@@ -1,6 +1,23 @@
 /**
  * Created by davidbagno on 11/22/13.
  */
+const oAuthURI = "https://hadev.agilexhealth.com:8443/ssoeproxy/veteran/authorize?response_type=code&state=stateId&client_id=MobileBlueButton&redirect_uri=https://hadev.agilexhealth.com:8443/MobileHealthPlatformWeb/oauthtoken?original_redirect_uri%3Dhttp://localhost:63342/jqm-root/index.html#goals&scope=read";
+
+var userLoggedIn = false;
+
+$(document).bind("pagebeforechange", function(e, data) {
+   if (typeof data.toPage == "string") {
+       var path = $.mobile.path.parseUrl(data.toPage),
+           linkOne = /^#my-goals/,
+           linkTwo = /^#pain-report/;
+       if (path.hash.search(linkOne) !== -1 || path.hash.search(linkTwo) !== -1) {
+           if (!userLoggedIn) {
+               window.location = oAuthURI;
+           }
+       }
+   }
+});
+
 function doLearn(x){
 switch(x)
 {
