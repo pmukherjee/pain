@@ -1,7 +1,9 @@
 /**
  * Created by davidbagno on 11/22/13.
  */
+function doLearn(x){
 
+}
 
 function hideByClassName(classname) {
 

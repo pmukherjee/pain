@@ -29,6 +29,9 @@
         #tbutton5 .ui-icon { background:  url(_assets/img/TabBarGoalsIcon.png) 100% 100% no-repeat;  background-size: 24px 24px; }
 
     </style>
+    <script>
+
+    </script>
 
 </head>
 
@@ -38,21 +41,23 @@
 
 <!-- #home Section -->
 <div  data-role="page" data-theme="b" id="home" class="my-page" >
-    <script>loadPage("home", "templates/home/home-page.html")
+    <script>
+        loadPage("home", "templates/home/home-page.html");
+
     </script>
 </div>
 
 <!-- #learn Section -->
 <div  data-role="page" data-theme="b" id="learn" class="my-page"  data-dom-cache="true" >
     <script>
-        loadPage("learn", "templates/learn/learn.html")
+        loadPage("learn", "templates/learn/learn.html");
     </script>
 </div>
 
 <!-- #assess Section-->
 <div  data-role="page" data-theme="b" id="assess" class="my-page" data-dom-cache="true">
     <script>
-        loadPage("assess", "templates/assess/assess.html")
+        loadPage("assess", "templates/assess/assess.html");
     </script>
 
 </div>
@@ -60,7 +65,7 @@
 <!-- #manage Section-->
 <div  data-role="page" data-theme="b" id="manage" class="my-page" data-dom-cache="true">
     <script>
-        loadPage("manage", "templates/manage/manage.html")
+        loadPage("manage", "templates/manage/manage.html");
     </script>
 </div>
 
@@ -68,7 +73,7 @@
 <div  data-role="page" data-theme="b" id="goals" class="my-page" data-dom-cache="true">
 
     <script>
-        loadPage("goals", "templates/goals/goals.html")
+        loadPage("goals", "templates/goals/goals.html");
     </script>
 </div>
 
@@ -81,9 +86,17 @@
     </script>
 </div>
 
+<div  data-role="page" data-theme="b" id="learnsection" class="my-page" >
+
+    <script>
+        loadPage("learnsection", "templates/learn/learnPainSection.html");
+    </script>
+</div>
+
+
 <div data-role="page" id="acute" data-theme="b" >
    <script>
-        loadPage("acute", "templates/learn/learnPainBasics-AcuteVsChronic.html")
+        loadPage("acute", "templates/learn/learnPainBasics-AcuteVsChronic.html");
         //loadPage("acute", "templates/learn/modal.html");
     </script>
 
@@ -91,14 +104,14 @@
 
 <div data-role="page" id="cycle" data-theme="b" >
     <script>
-        loadPage("cycle", "templates/learn/learnPainBasics-PainCycle.html")
+        loadPage("cycle", "templates/learn/learnPainBasics-PainCycle.html");
     </script>
 </div><!--end popup-->
 
 
 <div data-role="page" id="psycho" data-theme="b" >
     <script>
-        loadPage("psycho", "templates/learn/learnPainBasics-ChronicVsPsychogenicPain.html")
+        loadPage("psycho", "templates/learn/learnPainBasics-ChronicVsPsychogenicPain.html");
     </script>
 </div><!--end popup-->
 
