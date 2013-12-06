@@ -38,7 +38,7 @@
 
 </head>
 
-<body  data-theme="b" style="background-image:url(_assets/img/backgroundStripes.png); " >
+<body  data-theme="b" style="background-image:url(_assets/img/backgroundStripes.png);">
 
 
 
@@ -99,7 +99,7 @@
 </div>
 
 <!--Begin learn basics-->
-<div  data-role="page" data-theme="b" id="learnbasics" class="my-page" data-dom-cache="true">
+<div  data-role="page" data-theme="b" id="learnbasics" class="static-page" data-dom-cache="true">
 
     <script>
         loadPage("learnbasics", "templates/learn/learnPainBasics.html");
@@ -143,6 +143,54 @@
     </script>
 </div>
 <!--//End learn basics section-->
+
+<!-- #assess Section-->
+<div  data-role="page" data-theme="b" id="assess" class="my-page" data-dom-cache="true">
+    <script>
+        loadPage("assess", "templates/assess/assess.html");
+    </script>
+
+</div>
+
+<!-- #manage Section-->
+<div  data-role="page" data-theme="b" id="manage" class="static-page" data-dom-cache="true">
+    <script>
+        loadPage("manage", "templates/manage/manage.html");
+    </script>
+</div>
+<div  data-role="page" data-theme="b" id="managetools" class="static-page" data-dom-cache="true">
+    <script>
+        loadPage("managetools", "templates/manage/manageTools.html");
+    </script>
+</div>
+
+
+<!-- #goals section-->
+<div  data-role="page" data-theme="b" id="goals" class="my-page" data-dom-cache="true">
+
+    <script>
+        loadPage("goals", "templates/goals/goals.html");
+    </script>
+</div>
+
+
+
+<div data-role="page" id="popup" style="left:0px" class="dialog-page">
+
+    <div data-role="header"  data-direction="reverse" data-theme="b">
+        <a href="#home" data-icon="info" data-iconpos="left" class="ui-btn-left">
+            Close
+        </a>
+        <span class="ui-title" id="headerTitle">VA Pain Coach</span>
+    </div><!--end header 10-->
+    <div data-role="content" data-theme="d" class="ui-content ui-body-d" role="main">
+    <a href="#home">
+    <span><img src="_assets/img/about.png" widht="ww" height="hh" ></span>
+    </a>
+    </div><!-- /content -->
+
+
+</div>
 
 
 </body>
