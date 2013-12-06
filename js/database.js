@@ -2,7 +2,7 @@
  * Created by Daniel Streicher on 12/5/13.
  */
 
-const oAuthURI = "https://hadev.agilexhealth.com:8443/ssoeproxy/veteran/authorize?response_type=code&state=stateId&client_id=MobileBlueButton&redirect_uri=https://hadev.agilexhealth.com:8443/MobileHealthPlatformWeb/oauthtoken?original_redirect_uri%3Dhttp://localhost:63342/jqm-root/index.html#goals&scope=read";
+const oAuthURI = "https://hadev.agilexhealth.com:8443/ssoeproxy/veteran/authorize?response_type=code&state=stateId&client_id=MobileBlueButton&redirect_uri=https://hadev.agilexhealth.com:8443/MobileHealthPlatformWeb/oauthtoken?original_redirect_uri%3Dhttp://localhost:63342/jqm-root/index.html&scope=read";
 var database = {};
 
 (function ($){
@@ -53,19 +53,13 @@ var database = {};
 $(document).on("pageinit", "#home", function () {
     parseToken();
     database.initiate();
-});
-
-$(document).bind("pagebeforechange", function(e, data) {
-    if (typeof data.toPage == "string") {
-        var path = $.mobile.path.parseUrl(data.toPage),
-            linkOne = /^#my-goals/,
-            linkTwo = /^#pain-report/;
-        if (path.hash.search(linkOne) !== -1 || path.hash.search(linkTwo) !== -1) {
-            if (!database.userSession.isLoggedIn()) {
-                window.location = oAuthURI;
-            }
-        }
+    if (database.userSession.isLoggedIn()) {
+        $("#logout").show();
     }
+    else {
+        $("#logout").hide();
+    }
+    console.log(database.resources.get('logout').get('href'));
 });
 
 function cleanSession() {
@@ -75,6 +69,20 @@ function cleanSession() {
         }
     )
     document.cookie = encodeURIComponent('JSESSIONID') + "=deleted; expires=" + new Date(0).toUTCString();
+}
+
+function userLogin(redirect) {
+    if (!database.userSession.isLoggedIn()) {
+        window.location = oAuthURI;
+    }
+    else {
+        window.location = redirect;
+    }
+}
+
+function userLogout() {
+    cleanSession();
+    window.location = database.resources.get('logout').get('href') + "?redirect_uri=http://localhost:63342/jqm-root/index.html";
 }
 
 function parseToken() {

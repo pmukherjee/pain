@@ -1,16 +1,17 @@
 <div data-role="header" data-theme="b">
-    <a href="#home" data-icon="home" >Home</a>
+    <a href="#home" data-icon="home">Home</a>
+    <a href="home" id="logout" onclick="userLogout()" data-icon="refresh">Logout</a>
     <span class="ui-title">Goals</span>
 </div>
 
 <div data-role="content">
     <ul data-role="listview" data-inset="true">
-        <li><a href="#my-goals" data-transition="slide">
+        <li><a onclick="userLogin('#my-goals')">
             <img src="_assets/img/Goals-MyGoals.png">
             <h2>My Goals</h2>
             <p><b>Login Required</b></p>
         </a></li>
-        <li><a href="#pain-report">
+        <li><a onclick="userLogin('#pain-report')">
             <img src="_assets/img/Assess-PainReport.png">
             <h2>Reports</h2>
         </a></li>
