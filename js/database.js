@@ -3,11 +3,24 @@
  */
 
 const oAuthURI = "https://hadev.agilexhealth.com:8443/ssoeproxy/veteran/authorize?response_type=code&state=stateId&client_id=MobileBlueButton&redirect_uri=https://hadev.agilexhealth.com:8443/MobileHealthPlatformWeb/oauthtoken?original_redirect_uri%3Dhttp://localhost:63342/jqm-root/index.html#goals&scope=read";
-
-var userLoggedIn = false;
-database = {};
+var database = {};
 
 (function ($){
+    database.userSession = Backbone.Model.extend( {
+       initialize: function() {
+           this.url = database.resources.get('public-user-session').get('href');
+           this.fetch({async: false});
+       },
+        isLoggedIn: function() {
+            var loggedIn = false,
+                mhpUser = this.get('mhpuser');
+            if (typeof mhpUser !== 'undefined' && mhpUser) {
+                loggedIn = true;
+            }
+            return loggedIn;
+        }
+    });
+
     database.resourceLink = Backbone.Model.extend( {
         defaults: {
             "rel":"external",
@@ -27,21 +40,18 @@ database = {};
             return response.link;
         },
         initialize: function() {
-            this.fetch({async: false});
-        },
-        fetch: function(options) {
-            options = options || {};
-            options.dataType = "xml";
-            return Backbone.Collection.prototype.fetch.call(this, options);
+            this.fetch({async: false})
         }
     });
 
     database.initiate = function() {
         database.resources = new database.resources();
+        database.userSession = new database.userSession();
     };
 })(jQuery);
 
 $(document).on("pageinit", "#home", function () {
+    parseToken();
     database.initiate();
 });
 
@@ -51,9 +61,42 @@ $(document).bind("pagebeforechange", function(e, data) {
             linkOne = /^#my-goals/,
             linkTwo = /^#pain-report/;
         if (path.hash.search(linkOne) !== -1 || path.hash.search(linkTwo) !== -1) {
-            if (!userLoggedIn) {
+            if (!database.userSession.isLoggedIn()) {
                 window.location = oAuthURI;
             }
         }
     }
 });
+
+function cleanSession() {
+    window.sessionStorage['token'] = null;
+    $.ajaxPrefilter(function( options, originalOptions, jqXHR ) {
+            jqXHR.setRequestHeader("Authorization", "");
+        }
+    )
+    document.cookie = encodeURIComponent('JSESSIONID') + "=deleted; expires=" + new Date(0).toUTCString();
+}
+
+function parseToken() {
+    var params = {},
+        queryString = location.search.substring(1),
+        regex = /([^&=]+)=([^&]*)/g,
+        x;
+    while (x = regex.exec(queryString)) {
+        params[decodeURIComponent(x[1])] = decodeURIComponent(x[2]);
+    }
+
+    var token = params['token'];
+    if (typeof token !== 'undefined' && token !== 'undefined' && token !== null && token !== 'null') {
+        window.sessionStorage['token']= JSON.stringify(token);
+    }
+    var tokenObject = window.sessionStorage['token'];
+    if (typeof tokenObject !== 'undefined' && tokenObject !== 'undefined' && tokenObject !== null && tokenObject !== 'null') {
+        $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+           jqXHR.setRequestHeader("Authorization", "Bearer " + JSON.parse(tokenObject));
+        });
+    } else {
+        cleanSession();
+    }
+
+};
