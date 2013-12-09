@@ -41,8 +41,8 @@
 <body  data-theme="b" style="background-image:url(_assets/img/backgroundStripes.png);">
 
 
+<!-- HOME SECTION -->
 
-<!-- #home Section -->
 <div  data-role="page" data-theme="b" id="home" class="my-page" >
     <script>
         loadPage("home", "templates/home/home-page.html");
@@ -50,14 +50,84 @@
     </script>
 </div>
 
-<!-- #learn Section -->
+    <!-- About Page -->
+    <div data-role="page" id="popup" style="left:0px" class="about-page">
+
+        <div data-role="header"  data-direction="reverse" data-theme="b">
+            <a href="#home" data-icon="home" data-iconpos="left" class="ui-btn-left">
+                Home
+            </a>
+            <span class="ui-title" id="headerTitle">VA Pain Coach</span>
+        </div>
+        <div data-role="content" data-theme="d" class="ui-content ui-body-d" role="main">
+            <a href="#home">
+        <span style="align-content:center;vertical-align:middle;">
+        <img src="_assets/img/about.png" width="100%" height="100%">
+        </span>
+            </a>
+        </div>
+    </div>
+
+
+<!-- LEARN SECTION -->
+
 <div  data-role="page" data-theme="b" id="learn" class="my-page"  data-dom-cache="true" >
     <script>
         loadPage("learn", "templates/learn/learn.html");
     </script>
 </div>
 
-<!-- #assess Section-->
+    <!-- Learn Basics Page -->
+    <div  data-role="page" data-theme="b" id="learnbasics" class="static-page" data-dom-cache="true">
+
+        <script>
+            loadPage("learnbasics", "templates/learn/learnPainBasics.html");
+        </script>
+    </div>
+
+        <!--Pain Basics Section -->
+        <div  data-role="page" data-theme="b" id="learnsection" class="my-page" >
+
+            <script>
+                loadPage("learnsection", "templates/learn/learnPainSection.html");
+            </script>
+        </div>
+
+    <!-- Learn Goals Page -->
+    <div  data-role="page" data-theme="b" id="learngoals" class="my-page" data-dom-cache="true">
+
+        <script>
+            loadPage("learngoals", "templates/learn/learnPainGoals.html");
+        </script>
+    </div>
+
+        <!-- Pain Goals Section -->
+        <div  data-role="page" data-theme="b" id="goalsection" class="my-page" data-dom-cache="true">
+
+            <script>
+                loadPage("goalsection", "templates/learn/learnGoalsSection.html");
+            </script>
+        </div>
+
+    <!-- Learn Skills Page -->
+    <div  data-role="page" data-theme="b" id="learnskills" data-dom-cache="true" class="static-page" >
+
+        <script>
+            loadPage("learnskills", "templates/learn/learnPainSkills.html");
+        </script>
+    </div>
+
+        <!-- Pain Skills Section -->
+        <div  data-role="page" data-theme="b" id="skillssection" class="my-page"  >
+
+            <script>
+                loadPage("skillssection", "templates/learn/learnSkillsSection.html");
+            </script>
+        </div>
+
+
+<!-- ASSESS SECTION -->
+
 <div  data-role="page" data-theme="b" id="assess" class="my-page" data-dom-cache="true">
     <script>
         loadPage("assess", "templates/assess/assess.html");
@@ -65,20 +135,25 @@
 
 </div>
 
-<!-- #manage Section-->
+
+<!-- MANAGE SECTION-->
+
 <div  data-role="page" data-theme="b" id="manage" class="my-page" data-dom-cache="true">
     <script>
         loadPage("manage", "templates/manage/manage.html");
     </script>
 </div>
-<div  data-role="page" data-theme="b" id="managetools" class="my-page" data-dom-cache="true">
-    <script>
-        loadPage("managetools", "templates/manage/manageTools.html");
-    </script>
-</div>
+
+    <!-- Manage Tools Page -->
+    <div  data-role="page" data-theme="b" id="managetools" class="my-page" data-dom-cache="true">
+        <script>
+            loadPage("managetools", "templates/manage/manageTools.html");
+        </script>
+    </div>
 
 
-<!-- #goals section-->
+<!-- GOALS SECTION -->
+
 <div  data-role="page" data-theme="b" id="goals" class="my-page" data-dom-cache="true">
 
     <script>
@@ -86,112 +161,19 @@
     </script>
 </div>
 
-<div data-role="page" data-theme="b" id="my-goals" class="my-page" data-dom-cache="true">
-    <script>
-        loadPage("my-goals", "templates/goals/my-goals.html");
-    </script>
-</div>
+    <!-- My Goals Page -->
+    <div data-role="page" data-theme="b" id="my-goals" class="my-page" data-dom-cache="true">
+        <script>
+            loadPage("my-goals", "templates/goals/my-goals.html");
+        </script>
+    </div>
 
-<div data-role="page" data-theme="b" id="pain-report" class="my-page" data-dom-cache="true">
-    <script>
-        loadPage("pain-report", "templates/goals/pain-report.html");
-    </script>
-</div>
-
-<!--Begin learn basics-->
-<div  data-role="page" data-theme="b" id="learnbasics" class="static-page" data-dom-cache="true">
-
-    <script>
-        loadPage("learnbasics", "templates/learn/learnPainBasics.html");
-    </script>
-</div>
-
-
-<div  data-role="page" data-theme="b" id="learngoals" class="my-page" data-dom-cache="true">
-
-    <script>
-        loadPage("learngoals", "templates/learn/learnPainGoals.html");
-    </script>
-</div>
-
-<div  data-role="page" data-theme="b" id="learnskills" data-dom-cache="true" class="static-page" >
-
-    <script>
-        loadPage("learnskills", "templates/learn/learnPainSkills.html");
-    </script>
-</div>
-
-<div  data-role="page" data-theme="b" id="goalsection" class="my-page" data-dom-cache="true">
-
-    <script>
-        loadPage("goalsection", "templates/learn/learnGoalsSection.html");
-    </script>
-</div>
-
-<!--Begin learn basics section-->
-<div  data-role="page" data-theme="b" id="learnsection" class="my-page" >
-
-    <script>
-        loadPage("learnsection", "templates/learn/learnPainSection.html");
-    </script>
-</div>
-
-<div  data-role="page" data-theme="b" id="skillssecton" class="my-page"  >
-
-    <script>
-        loadPage("skillssecton", "templates/learn/learnSkillsSection.html");
-    </script>
-</div>
-<!--//End learn basics section-->
-
-<!-- #assess Section-->
-<div  data-role="page" data-theme="b" id="assess" class="my-page" data-dom-cache="true">
-    <script>
-        loadPage("assess", "templates/assess/assess.html");
-    </script>
-
-</div>
-
-<!-- #manage Section-->
-<div  data-role="page" data-theme="b" id="manage" class="static-page" data-dom-cache="true">
-    <script>
-        loadPage("manage", "templates/manage/manage.html");
-    </script>
-</div>
-<div  data-role="page" data-theme="b" id="managetools" class="static-page" data-dom-cache="true">
-    <script>
-        loadPage("managetools", "templates/manage/manageTools.html");
-    </script>
-</div>
-
-
-<!-- #goals section-->
-<div  data-role="page" data-theme="b" id="goals" class="my-page" data-dom-cache="true">
-
-    <script>
-        loadPage("goals", "templates/goals/goals.html");
-    </script>
-</div>
-
-
-
-<div data-role="page" id="popup" style="left:0px" class="about-page">
-
-    <div data-role="header"  data-direction="reverse" data-theme="b">
-        <a href="#home" data-icon="home" data-iconpos="left" class="ui-btn-left">
-            Home
-        </a>
-        <span class="ui-title" id="headerTitle">VA Pain Coach</span>
-    </div><!--end header 10-->
-    <div data-role="content" data-theme="d" class="ui-content ui-body-d" role="main">
-    <a href="#home">
-    <span style="align-content:center;vertical-align:middle;">
-    <img src="_assets/img/about.png" width="100%" height="100%">
-    </span>
-    </a>
-    </div><!-- /content -->
-</div>
-
+    <!-- Pain Report Page -->
+    <div data-role="page" data-theme="b" id="pain-report" class="my-page" data-dom-cache="true">
+        <script>
+            loadPage("pain-report", "templates/goals/pain-report.html");
+        </script>
+    </div>
 
 </body>
 </html>
