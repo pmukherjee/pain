@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Soothing Audio</key>
+	<dict>
+		<key>ClassForController</key>
+		<string>SoothingAudio</string>
+	</dict>
+	<key>Soothing Images</key>
+	<dict>
+		<key>ClassForController</key>
+		<string>SoothingImages</string>
+	</dict>
+	<key>Call a friend</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Pick up the phone and see what your friends, near and far, are up to.</string>
+	</dict>
+	<key>Check out YouTube</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Find a funny video to laugh at on YouTube.</string>
+	</dict>
+	<key>Clean your room</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Cleaning and straightening up your surroundings can help you feel good.</string>
+	</dict>
+	<key>Cook and enjoy</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Cook your favorite meal. Care for yourself by preparing food you love, then enjoy eating it.</string>
+	</dict>
+	<key>Count to 100</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Counting to 10 not enough to cool you down? Try higher…say, 100?</string>
+	</dict>
+	<key>Do a home project</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Work on that project you’ve been saving for a rainy day.</string>
+	</dict>
+	<key>Do a jigsaw puzzle</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Get a jigsaw puzzle and have fun putting the pieces together.</string>
+	</dict>
+	<key>Do something for someone else</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Feel better about yourself by doing something nice for someone else.</string>
+	</dict>
+	<key>Do Sudoku/crossword</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Play Sudoku or do a crossword to engage your mind.</string>
+	</dict>
+	<key>Doodle on paper</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Just pick up a pen, put it down on the paper, and start doodling. See what you create</string>
+	</dict>
+	<key>Draw or paint</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Draw or paint, without needing it to be ‘good’ — just be creative!</string>
+	</dict>
+	<key>Email a distant friend</key>
+	<dict>
+		<key>TextBody</key>
+		<string>There&apos;s no better time to catch up with a friend via e-mail.</string>
+	</dict>
+	<key>Go fishing</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Catch some fish in the local pond or creek.</string>
+	</dict>
+	<key>Go for a bike ride</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Go for a bike ride. Let the exercise, fresh air, sights and sounds distract your from your thoughts, and enjoy the moment.</string>
+	</dict>
+	<key>Go for a run</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Go for a run to raise your heart rate, clear your mind, and release some tension in your muscles.</string>
+	</dict>
+	<key>Go for a walk</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Go for a walk. Moving your legs, even just walking around the block, can help give you a different perspective.</string>
+	</dict>
+	<key>Go shopping</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Go shopping. Just enjoy window shopping, or take care of overdue errands.</string>
+	</dict>
+	<key>Go to a friend&apos;s house</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Go somewhere - like a friend&apos;s house - to change scenes and hang out.</string>
+	</dict>
+	<key>Go to a museum</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Be inspired by the works of others at a museum.</string>
+	</dict>
+	<key>Listen to a funny story</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Ask someone to tell you a funny story. Get lost in hearing the adventures of others.</string>
+	</dict>
+	<key>Log in to Facebook</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Get on Facebook and connect with your friends virtually. What are other people up to these days?</string>
+	</dict>
+	<key>Mold clay</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Try molding clay. Allow your hands to create a masterpiece or to just get out your energy.</string>
+	</dict>
+	<key>Organize your bookcase/spice rack</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Use your mind to organize your books or spice rack. It can be nice to have some order when your emotions feel chaotic.</string>
+	</dict>
+	<key>Plan your next vacation</key>
+	<dict>
+		<key>TextBody</key>
+		<string>There’s nothing like having a trip to look forward to in the future. Why not start planning for it now?</string>
+	</dict>
+	<key>Play a video game</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Play a video game. Lose yourself in another world.</string>
+	</dict>
+	<key>Play pool</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Play some pool, sink some balls, and have fun!</string>
+	</dict>
+	<key>Play solitaire</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Play solitaire. Count your cards, shuffle and play, or pick up a game on your phone or computer.</string>
+	</dict>
+	<key>Play with another app</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Play games or learn something new with other apps.</string>
+	</dict>
+	<key>Play with children</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Play with children. Spend time with the little ones in your family that crack you up.</string>
+	</dict>
+	<key>Put your troubles in a box</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Imagine boxing your troubles up and shelving them — you can come back to them later.</string>
+	</dict>
+	<key>Read a funny book or comic</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Let yourself laugh and go into another world with a funny book or comic.</string>
+	</dict>
+	<key>Read a magazine</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Read a magazine. Thumb through articles, cut out recipes for new ideas, or get lost in an exposé.</string>
+	</dict>
+	<key>Rubik’s Cube</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Rubik’s Cube: it looks simple, yet it’s mystifying. Get busy with your hands and mind.</string>
+	</dict>
+	<key>Scrapbook</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Put together a scrapbook of memories from a happy time.</string>
+	</dict>
+	<key>Sing along to your music</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Turn on your radio and sing in the car. Or blast your music at home and belt it out.</string>
+	</dict>
+	<key>Surf the internet</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Surf the internet.</string>
+	</dict>
+	<key>Take a mental vacation</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Allow your mind to take a vacation from your problems. Think about something fun or relaxing.</string>
+	</dict>
+	<key>Take a nap</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Take a break and let yourself sleep and recharge.</string>
+	</dict>
+	<key>Think about the future</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Think about the future. Imagine things you’re looking forward to: finishing school, falling in love, or going on your next adventure.</string>
+	</dict>
+	<key>Volunteer</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Volunteer and make a difference in someone else’s life to take your mind off yourself.</string>
+	</dict>
+	<key>Walk your dog</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Walk your dog... he may need a break, too.</string>
+	</dict>
+	<key>Watch a funny movie</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Watch a funny movie. It&apos;s hard to stay upset when you’re laughing out loud.</string>
+	</dict>
+	<key>Watch sports or athletics</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Turn on your favorite athletic event, from football to dance, and let yourself get into it.</string>
+	</dict>
+	<key>Watch your favorite TV show</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Watch some of your favorite TV shows.</string>
+	</dict>
+	<key>Word scramble</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Scramble all the letters in your full name and see how many words you can make out of them!</string>
+	</dict>
+	<key>Work on a project with your hands</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Get into a project, whether it’s gardening, woodworking, or sewing.</string>
+	</dict>
+	<key>Write poetry</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Write poetry. Express yourself with your words and put it down on paper.</string>
+	</dict>
+	<key>Write thank you cards</key>
+	<dict>
+		<key>TextBody</key>
+		<string>Express gratitude: write to others to let them know you appreciate them thinking of you.</string>
+	</dict>
+</dict>
+</plist>

@@ -18,7 +18,7 @@
     <script src="js/backbone-1.1.0.js" language="JavaScript"></script>
     <script src="js/application.js" language="JavaScript"></script>
     <script src="js/database.js" language="JavaScript"></script>
-
+    <script src="js/plist_parser.js" language="JavaScript"></script>
     <link rel="shortcut icon" href="favicon.ico">
 
     <style scoped>
@@ -32,9 +32,7 @@
         #tbutton5 .ui-icon { background:  url(_assets/img/TabBarGoalsIcon.png) 100% 100% no-repeat;  background-size: 24px 24px; }
 
     </style>
-    <script>
 
-    </script>
 
 </head>
 
@@ -121,6 +119,7 @@
         <div  data-role="page" data-theme="b" id="skillssection" class="my-page"  >
 
             <script>
+
                 loadPage("skillssection", "templates/learn/learnSkillsSection.html");
             </script>
         </div>
@@ -138,19 +137,29 @@
 
 <!-- MANAGE SECTION-->
 
-<div  data-role="page" data-theme="b" id="manage" class="my-page" data-dom-cache="true">
+<div  data-role="page" data-theme="b" id="manage" class="static-page" data-dom-cache="true">
     <script>
         loadPage("manage", "templates/manage/manage.html");
     </script>
 </div>
 
     <!-- Manage Tools Page -->
-    <div  data-role="page" data-theme="b" id="managetools" class="my-page" data-dom-cache="true">
-        <script>
-            loadPage("managetools", "templates/manage/manageTools.html");
-        </script>
-    </div>
+    <div  data-role="page" data-theme="b" id="managetools" class="static-page" data-dom-cache="true">
+    <script>
+        loadPage("managetools", "templates/manage/manageTools.html");
+    </script>
+</div>
+<div  data-role="page" data-theme="b" id="manageread" class="static-page" data-dom-cache="true">
+    <script>
+        loadPage("manageread", "templates/manage/manageReadActivities.html");
+    </script>
+</div>
 
+<div  data-role="page" data-theme="b" id="managecreate" class="static-page" data-dom-cache="true">
+    <script>
+        loadPage("managecreate", "templates/manage/manageCreateActivity.html");
+    </script>
+</div>
 
 <!-- GOALS SECTION -->
 
