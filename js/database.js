@@ -44,6 +44,32 @@ var database = {};
         }
     });
 
+    database.painReportSummary = Backbone.Model.extend( {
+       initialize: function() {
+           this.url = database.resources.get('system-root').get('href') + "patient/" + database.userSession.toJSON().mhpuser.userIdentifier.assigningAuthority + "/" + database.userSession.toJSON().mhpuser.userIdentifier.uniqueId + "/pain-goals/report";
+       }
+    });
+
+    database.painGoal = Backbone.Model.extend({
+        defaults: {
+            "name":"",
+            "status":"Active",
+            "dateStarted":"",
+            "targetDate":"",
+            "percentComplete":"0",
+            "goalType":"Veteran",
+            "details":"",
+            "nextActionStep":""
+        }
+    });
+
+    database.painGoalList = Backbone.Collection.extend( {
+        model: database.painGoal,
+        initialize: function() {
+            this.url = database.resources.get('system-root').get('href') + "patient/" + database.userSession.toJSON().mhpuser.userIdentifier.assigningAuthority + "/" + database.userSession.toJSON().mhpuser.userIdentifier.uniqueId + "/pain-goals";
+        }
+    });
+
     database.initiate = function() {
         database.resources = new database.resources();
         database.userSession = new database.userSession();
@@ -55,12 +81,35 @@ $(document).on("pageinit", "#home", function () {
     database.initiate();
     if (database.userSession.isLoggedIn()) {
         $("#logout").show();
+        database.painGoal = new database.painGoal();
+        database.painReportSummary = new database.painReportSummary();
+        database.painGoalList = new database.painGoalList();
     }
     else {
         $("#logout").hide();
     }
-    console.log(database.resources.get('logout').get('href'));
 });
+
+$(document).on("pageshow", "#pain-report", function() {
+    database.painReportSummary.fetch({async: false});
+    $("#pain-report-summary").empty();
+    $("#pain-report-summary").append(database.painReportSummary.toJSON().report);
+});
+
+$(document).on("pageshow", "#my-goals", function() {
+    database.painGoalList.fetch({async: false});
+});
+
+function saveGoals() {
+    database.painGoal.save([
+        {name: $("#create-goals-name").val()},
+        {details: $("#create-goals-detail").val()},
+        {targetDate: $("#create-goals-date").val()},
+        {percentComplete: $("#create-goals-complete").val()}],
+        {url: database.resources.get('system-root').get('href') + "patient/" + database.userSession.toJSON().mhpuser.userIdentifier.assigningAuthority + "/" + database.userSession.toJSON().mhpuser.userIdentifier.uniqueId + "/pain-goals"}
+    );
+    $.mobile.changePage("#my-goals");
+}
 
 function cleanSession() {
     window.sessionStorage['token'] = null;
@@ -100,6 +149,9 @@ function parseToken() {
     }
     var tokenObject = window.sessionStorage['token'];
     if (typeof tokenObject !== 'undefined' && tokenObject !== 'undefined' && tokenObject !== null && tokenObject !== 'null') {
+        $.ajaxSetup( {
+            data: { access_token: JSON.parse(tokenObject)}
+        })
         $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
            jqXHR.setRequestHeader("Authorization", "Bearer " + JSON.parse(tokenObject));
         });

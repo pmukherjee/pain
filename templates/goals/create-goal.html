@@ -1,0 +1,48 @@
+<div data-role="header" data-theme="b">
+    <a href="#my-goals" data-icon="back" >My Goals</a>
+    <a href="#" onclick="saveGoals()">Save</a>
+    <span class="ui-title">Create Goal</span>
+</div>
+
+<div data-role="content">
+    <div data-role="fieldcontain">
+        <label for="create-goals-name">Name: </label>
+        <input type="text" name="create-goals-name" id="create-goals-name" value="" data-mini="true" />
+    </div>
+
+    <div data-role="fieldcontain">
+        <label for="create-goals-detail">Detail: </label>
+        <textarea cols="40" rows="8" name="create-goals-detail" id="create-goals-detail" placeholder="Specifically what you will accomplish" data-mini="true"></textarea>
+    </div>
+    <div data-role="fieldcontain">
+        <label for="create-goals-date">Target Date: </label>
+        <input type="date" id="create-goals-date" value="" data-mini="true" />
+    </div>
+    <div data-role="fieldcontain">
+        <label for="create-goals-complete">Completion: </label>
+        <input type="range" name="create-goals-complete" id="create-goals-complete" value="0" min="0" max="100" data-highlight="true" data-mini="true"/>
+    </div>
+    <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <legend>Reminders:</legend>
+                <input type="radio" name="radio-choice-b" id="radio-choice-none" value="none" checked="checked"/>
+                <label for="radio-choice-none">None</label>
+            <input type="radio" name="radio-choice-b" id="radio-choice-daily" value="daily"/>
+            <label for="radio-choice-daily">Daily</label>
+            <input type="radio" name="radio-choice-b" id="radio-choice-weekly" value="weekly"/>
+            <label for="radio-choice-weekly">Weekly</label>
+            <input type="radio" name="radio-choice-b" id="radio-choice-monthly" value="monthly"/>
+            <label for="radio-choice-monthly">Monthly</label>
+        </fieldset>
+    </div>
+</div>
+
+<div data-role="navbar" class="nav-bar"   data-grid="d" data-id="myfooter" data-position-to="g" data-position="fixed" data-theme="b" data-prefetch="true">
+    <ul>
+        <li><a href="#home"  id="tbutton1" data-icon="custom" >Home</a></li>
+        <li><a href="#learn"  id="tbutton2" data-icon="custom">Learn</a></li>
+        <li><a href="#assess" id="tbutton3" data-icon="custom" >Access</a></li>
+        <li><a href="#manage" id="tbutton4" data-icon="custom">Manage</a></li>
+        <li><a href="#goals" id="tbutton5" data-icon="custom" class="ui-btn-active ui-state-persist">Goals</a></li>
+    </ul>
+</div>

@@ -6,11 +6,15 @@
     <title>Pain Coach</title>
 
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.3.2.min.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="css/pain_coach.css">
+
+    <link rel="apple-touch-icon" href="_assets/img/paincoach-114.png">
+    <link rel="apple-touch-startup-image" href="_assets/img/about.png">
 
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mobile-1.3.2.js" language="JavaScript"></script>
@@ -176,6 +180,13 @@
             loadPage("my-goals", "templates/goals/my-goals.html");
         </script>
     </div>
+
+        <!-- Create Goal Page -->
+        <div data-role="page" data-theme="b" id="create-goal" class="my-page" data-dom-cache="true">
+            <script>
+                loadPage("create-goal", "templates/goals/create-goal.html");
+            </script>
+        </div>
 
     <!-- Pain Report Page -->
     <div data-role="page" data-theme="b" id="pain-report" class="my-page" data-dom-cache="true">
